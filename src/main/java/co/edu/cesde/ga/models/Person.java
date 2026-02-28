@@ -2,13 +2,14 @@ package co.edu.cesde.ga.models;
 
 public class Person {
 
-    Long user_id;
-    String code;
-    String document_number;
-    String first_name;
-    String last_name;
-    Boolean status;
+    private Long user_id;
+    private String code;
+    private String document_number;
+    private String first_name;
+    private String last_name;
+    private Boolean status;
 
+    //constructor vacio y lleno//
     public Person() {
     }
 
@@ -68,6 +69,22 @@ public class Person {
     public void setStatus(Boolean status) {
         this.status = status;
     }
+
+    @Override
+    public String toString() {
+        return
+                "userId=" + user_id+
+                        ", code=" + code+ '\'' +
+                        ", documentNumber= '" + document_number+ '\'' +
+                        "firstName= '" + first_name+ '\'' +
+                        "lastName= '" + last_name+ '\'' +
+                        "status= " + status;
+    }
+
+
+
+
+
 }
 
 
