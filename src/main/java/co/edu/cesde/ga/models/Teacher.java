@@ -1,37 +1,57 @@
-package co.edu.cesde.ga.models;
+package models;
 
-                    // Usar el extends me manda toda la informacion de dicha pestaña//
-public class Teacher extends Person{
+import co.edu.cesde.app.Main;
 
-    private String birthDate;
+public class teachers extends persons{
 
-    public Teacher(long l, String number, String id, String sara, String lopez, boolean b){
-        super();
+    private String firstname;
+    private String lastname;
+    private String user_id;
+    private Boolean status;
+
+    public teachers(){}
+
+    public teachers(String firstname, String lastname, String user_id, boolean status) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.user_id = user_id;
+        this.status = status;
     }
 
-    public Teacher(Long user_id, String code, String document_number, String first_name, String last_name, Boolean status, String birthDate) {
-        super(user_id, code, document_number, first_name, last_name, status);
-        this.birthDate = birthDate;
+    public String getfirstname() {
+        return firstname;
+    }
+    public String getlastname(){
+        return lastname;
     }
 
-    public String getBirthDate() {
-        return birthDate;
+    public String getuser_id(){
+        return user_id;
+    }
+    public boolean getstatus(){
+        return status;
     }
 
-    public void setBirthDate(String birthDate) {
-        this.birthDate = birthDate;
+
+
+
+
+
+
+    public void setfirstname(String firstname) {
+        this.firstname = firstname;}
+
+    public void setlastname(String lastname) {
+        this.lastname = lastname;
     }
-                        @Override
-                        public String toString() {
-                            return "Teacher =" + super.toString();
-                        }
+    public void setuser_id(String user_id) {
+        this.user_id = user_id;
+    }
+    public void setstatus(boolean status) {
+        this.status = status;
+    }
 
-
-
-
-
-
-
-
-                        // Ultima linea
-}
+    @Override
+    public String getRole() {
+        return "";
+    }

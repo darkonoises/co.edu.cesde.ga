@@ -1,90 +1,62 @@
-package co.edu.cesde.ga.models;
+package models;
 
-public class Person {
+import co.edu.cesde.app.Main;
 
-    private Long user_id;
-    private String code;
-    private String document_number;
-    private String first_name;
-    private String last_name;
-    private Boolean status;
+public class persons extends Main{
 
-    //constructor vacio y lleno//
-    public Person() {
-    }
+    protected String firstname;
+    protected String lastname;
+    protected String user_id;
+    protected Boolean status;
 
-    public Person(Long user_id, String code, String document_number, String first_name, String last_name, Boolean status) {
+    protected persons(){}
+
+    public persons(String firstname, String lastname, String user_id, boolean status) {
+        this.firstname = firstname;
+        this.lastname = lastname;
         this.user_id = user_id;
-        this.code = code;
-        this.document_number = document_number;
-        this.first_name = first_name;
-        this.last_name = last_name;
         this.status = status;
     }
 
-    public Long getUser_id() {
+    public String getfirstname() {
+        return firstname;
+    }
+    public String getlastname(){
+        return lastname;
+    }
+
+    public String getuser_id(){
         return user_id;
     }
-
-    public void setUser_id(Long user_id) {
-        this.user_id = user_id;
-    }
-
-    public String getCode() {
-        return code;
-    }
-
-    public void setCode(String code) {
-        this.code = code;
-    }
-
-    public String getDocument_number() {
-        return document_number;
-    }
-
-    public void setDocument_number(String document_number) {
-        this.document_number = document_number;
-    }
-
-    public String getFirst_name() {
-        return first_name;
-    }
-
-    public void setFirst_name(String first_name) {
-        this.first_name = first_name;
-    }
-
-    public String getLast_name() {
-        return last_name;
-    }
-
-    public void setLast_name(String last_name) {
-        this.last_name = last_name;
-    }
-
-    public Boolean getStatus() {
+    public boolean getstatus(){
         return status;
     }
 
-    public void setStatus(Boolean status) {
+
+
+
+
+
+
+    public void setfirstname(String firstname) {
+        this.firstname = firstname;}
+
+    public void setlastname(String lastname) {
+        this.lastname = lastname;
+    }
+    public void setuser_id(String user_id) {
+        this.user_id = user_id;
+    }
+    public void setstatus(boolean status) {
         this.status = status;
     }
 
-    @Override
-    public String toString() {
-        return
-                "userId=" + user_id+
-                        ", code=" + code+ '\'' +
-                        ", documentNumber= '" + document_number+ '\'' +
-                        "firstName= '" + first_name+ '\'' +
-                        "lastName= '" + last_name+ '\'' +
-                        "status= " + status;
-    }
-
-
-
-
-
 }
+
+
+
+public abstract String getRole();
+
+    }
 
 

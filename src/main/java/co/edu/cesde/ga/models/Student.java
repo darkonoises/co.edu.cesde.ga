@@ -1,33 +1,63 @@
-package co.edu.cesde.ga.models;
+package models;
 
-public class Student extends Person {
+import co.edu.cesde.app.Main;
 
-    private String birthDate;
+public class students extends persons {
 
-    public Student(long l, String number, String id, String nombre, String apellido, boolean b){
-        super();
+    private String firstname;
+    private String lastname;
+    private String user_id;
+    private Boolean status;
+
+    public students(){}
+
+    public students(String firstname, String lastname, String user_id, boolean status) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.user_id = user_id;
+        this.status = status;
+    }
+    public students(){
+        super(int birth)
     }
 
-    public Student(Long user_id, String code, String document_number, String first_name, String last_name, Boolean status, String birthDate) {
-        super(user_id, code, document_number, first_name, last_name, status);
-        this.birthDate = birthDate;
+    public String getfirstname() {
+        return firstname;
+    }
+    public String getlastname(){
+        return lastname;
     }
 
-    public String getBirthDate() {
-        return birthDate;
+    public String getuser_id(){
+        return user_id;
+    }
+    public boolean getstatus(){
+        return status;
     }
 
-    public void setBirthDate(String birthDate) {
-        this.birthDate = birthDate;
+
+
+
+
+
+
+    public void setfirstname(String firstname) {
+        this.firstname = firstname;}
+
+    public void setlastname(String lastname) {
+        this.lastname = lastname;
     }
+    public void setuser_id(String user_id) {
+        this.user_id = user_id;
+    }
+    public void setstatus(boolean status) {
+        this.status = status;
+    }
+
     @Override
-    public String toString() {
-        return "Student =" + super.toString();
+    public String getRole() {
+        return "";
     }
 
 
-
-
-
-    //ultima fila
 }

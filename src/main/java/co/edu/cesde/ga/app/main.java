@@ -1,42 +1,38 @@
-package co.edu.cesde.ga.app;
+package co.edu.cesde.app;
 
-//Impotar el constructor
-import co.edu.cesde.ga.models.Person;
-import co.edu.cesde.ga.models.Student;
-import co.edu.cesde.ga.models.Teacher;
+import models.persons;
+import models.students;
+import models.teachers
 
-public class main {
+public class Main {
     public static void main(String[] args) {
 
-        System.out.println("Hello world");
-        //Crea el constructor
-        Person person = new Person();
-        Person person2 = new Person();
-        Person person3 = new Person();
-        Person person4 = new Person();
+        System.out.println("Hello ma world yeah");
 
-        //Le da un valor a la variable
-        person.setFirst_name("John");
-        person.getFirst_name();
-        person2.setFirst_name("Juan");
-        person2.getFirst_name();
-        person3.setFirst_name("Erica");
-        person3.getFirst_name();
+        persons persona1 = new persons();
+        persons persona2 = new persons();
+        persons persona3 = new persons();
+        persons persona4 = new persons();
 
-        Student student1 = new Student();
-        student1.setFirst_name("Carlos");
-        student1.setBirthDate("2001-01-01");
-        System.out.println(student1.toString());
+        persona1.setfirstname("Nick");
+        persona1.setlastname("Smith");
+        persona1.setuser_id("111");
+        persona1.setstatus(true);
+        System.out.println(persona1.getfirstname());
+        System.out.println(persona1.getlastname());
+        System.out.println(persona1.getuser_id());
+        System.out.println(persona1.getstatus());
 
-        Teacher teacher1 = new Teacher();
-        teacher1.setFirst_name("Ana");
-        System.out.println(teacher1.toString());
+        persona2.setfirstname("John");
+        persona2.setlastname("Wick");
+        persona2.setuser_id("222");
+        persona2.setstatus(true);
+        System.out.println(persona2.getfirstname());
+        System.out.println(persona2.getlastname());
+        System.out.println(persona2.getuser_id());
+        System.out.println(persona2.getstatus());
 
-        Student student2 = new Student(4L,"444","1036953097","Laura","Mejia", true);
-
-        Teacher teacher2 = new Teacher(5L,"555","1036953098","Sara", "Lopez", true);
-
-
+        students stud1 = new students();
 
 
     }
