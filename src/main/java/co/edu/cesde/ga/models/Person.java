@@ -1,62 +1,42 @@
 package models;
 
-import co.edu.cesde.app.Main;
+public abstract class Person {
+    // Atributos protegidos para que las clases hijas puedan acceder a ellos
+    private String documentNumber;
+    private String firstName;
+    private String lastName;
+    private String userId;
+    private boolean status;
+    private String birthday; // Agregado para el requerimiento del toString
 
-public class persons extends Main{
+    // Constructor vacío
+    public Person() {}
 
-    protected String firstname;
-    protected String lastname;
-    protected String user_id;
-    protected Boolean status;
-
-    protected persons(){}
-
-    public persons(String firstname, String lastname, String user_id, boolean status) {
-        this.firstname = firstname;
-        this.lastname = lastname;
-        this.user_id = user_id;
+    // Constructor con parámetros
+    public Person(String firstName, String lastName, String userId, boolean status, String birthday) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.userId = userId;
         this.status = status;
+        this.birthday = birthday;
     }
 
-    public String getfirstname() {
-        return firstname;
-    }
-    public String getlastname(){
-        return lastname;
-    }
+    // Getters
+    public String getFirstName() { return firstName; }
+    public String getLastName() { return lastName; }
+    public String getUserId() { return userId; }
+    public boolean isStatus() { return status; }
+    public String getBirthday() { return birthday; }
 
-    public String getuser_id(){
-        return user_id;
-    }
-    public boolean getstatus(){
-        return status;
-    }
+    // Setters
+    public void setFirstName(String firstName) { this.firstName = firstName; }
+    public void setLastName(String lastName) { this.lastName = lastName; }
+    public void setUserId(String userId) { this.userId = userId; }
+    public void setStatus(boolean status) { this.status = status; }
+    public void setBirthday(String birthday) { this.birthday = birthday; }
 
-
-
-
-
-
-
-    public void setfirstname(String firstname) {
-        this.firstname = firstname;}
-
-    public void setlastname(String lastname) {
-        this.lastname = lastname;
-    }
-    public void setuser_id(String user_id) {
-        this.user_id = user_id;
-    }
-    public void setstatus(boolean status) {
-        this.status = status;
-    }
-
+    // Método abstracto que Student y Teacher deberán implementar
+    public abstract String getRole();
 }
-
-
-
-public abstract String getRole();
-
-    }
 
 
