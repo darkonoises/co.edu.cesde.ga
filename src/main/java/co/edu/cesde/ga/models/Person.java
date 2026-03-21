@@ -1,4 +1,4 @@
-package models;
+package co.edu.cesde.ga.models;
 
 public abstract class Person {
     // Atributos protegidos para que las clases hijas puedan acceder a ellos

@@ -1,4 +1,4 @@
-package models;
+package co.edu.cesde.ga.models;
 
 public class Teacher extends models.Person {
 

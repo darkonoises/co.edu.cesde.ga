@@ -1,6 +1,6 @@
-package models;
+package co.edu.cesde.ga.models;
 
-public class Student extends models.Person {
+public class Student extends Person {
 
     // Constructor vacío
     public Student() {
@@ -39,5 +39,8 @@ public class Student extends models.Person {
                 " | ID: " + this.userId +
                 " | Birthday: " + this.birthday +
                 " | Status: " + (this.status ? "Active" : "Inactive");
+    }
+
+    public Object getDocumentNumber() {
     }
 }
