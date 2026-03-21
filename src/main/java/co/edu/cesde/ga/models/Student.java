@@ -1,63 +1,43 @@
 package models;
 
-import co.edu.cesde.app.Main;
+public class Student extends models.Person {
 
-public class students extends persons {
-
-    private String firstname;
-    private String lastname;
-    private String user_id;
-    private Boolean status;
-
-    public students(){}
-
-    public students(String firstname, String lastname, String user_id, boolean status) {
-        this.firstname = firstname;
-        this.lastname = lastname;
-        this.user_id = user_id;
-        this.status = status;
-    }
-    public students(){
-        super(int birth)
+    // Constructor vacío
+    public Student() {
+        super();
     }
 
-    public String getfirstname() {
-        return firstname;
-    }
-    public String getlastname(){
-        return lastname;
+    // Constructor con parámetros que hereda de Person
+    public Student(String firstName, String lastName, String userId, boolean status, String birthday) {
+        super(firstName, lastName, userId, status, birthday);
     }
 
-    public String getuser_id(){
-        return user_id;
-    }
-    public boolean getstatus(){
-        return status;
-    }
+    public String getFirstName() { return firstName; }
+    public String getLastName() { return lastName; }
+    public String getUserId() { return userId; }
+    public boolean isStatus() { return status; }
+    public String getBirthday() { return birthday; }
+
+    public void setFirstName(String firstName) { this.firstName = firstName; }
+    public void setLastName(String lastName) { this.lastName = lastName; }
+    public void setUserId(String userId) { this.userId = userId; }
+    public void setStatus(boolean status) { this.status = status; }
+    public void setBirthday(String birthday) { this.birthday = birthday; }
 
 
-
-
-
-
-
-    public void setfirstname(String firstname) {
-        this.firstname = firstname;}
-
-    public void setlastname(String lastname) {
-        this.lastname = lastname;
-    }
-    public void setuser_id(String user_id) {
-        this.user_id = user_id;
-    }
-    public void setstatus(boolean status) {
-        this.status = status;
-    }
 
     @Override
     public String getRole() {
-        return "";
+        return "Student";
     }
 
-
+    // El Override de toString agregando el birthday
+    @Override
+    public String toString() {
+        return "Role: " + getRole() +
+                " | Name: " + this.firstName + " " + this.lastName +
+                " | ID: " + this.userId +
+                " | Birthday: " + this.birthday +
+                " | Status: " + (this.status ? "Active" : "Inactive");
+    }
 }

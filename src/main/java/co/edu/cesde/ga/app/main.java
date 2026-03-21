@@ -1,39 +1,59 @@
-package co.edu.cesde.app;
+package co.edu.cesde.ga.app;
 
-import models.persons;
-import models.students;
-import models.teachers
+// Importamos las clases del paquete models
+import models.Person;
+import models.Student;
+import models.Teacher;
 
-public class Main {
+public class main {
     public static void main(String[] args) {
 
         System.out.println("Hello ma world yeah");
 
-        persons persona1 = new persons();
-        persons persona2 = new persons();
-        persons persona3 = new persons();
-        persons persona4 = new persons();
+        // Creación de objetos tipo Person
+        Person persona1 = new Person() {
+            @Override
+            public String getRole() {
+                return "";
+            }
+        };
+        Person persona2 = new Person() {
+            @Override
+            public String getRole() {
+                return "";
+            }
+        };
 
-        persona1.setfirstname("Nick");
-        persona1.setlastname("Smith");
-        persona1.setuser_id("111");
-        persona1.setstatus(true);
-        System.out.println(persona1.getfirstname());
-        System.out.println(persona1.getlastname());
-        System.out.println(persona1.getuser_id());
-        System.out.println(persona1.getstatus());
+        // Configuración de persona1
+        persona1.setFirstName("Nick");
+        persona1.setLastName("Smith");
+        persona1.setUserId("111");
+        persona1.setStatus(true);
 
-        persona2.setfirstname("John");
-        persona2.setlastname("Wick");
-        persona2.setuser_id("222");
-        persona2.setstatus(true);
-        System.out.println(persona2.getfirstname());
-        System.out.println(persona2.getlastname());
-        System.out.println(persona2.getuser_id());
-        System.out.println(persona2.getstatus());
+        System.out.println("Nombre: " + persona1.getFirstName());
+        System.out.println("Apellido: " + persona1.getLastName());
+        System.out.println("ID: " + persona1.getUserId());
+        System.out.println("Estado: " + persona1.isStatus());
 
-        students stud1 = new students();
+        System.out.println("--------------------");
 
+        // Configuración de persona2
+        persona2.setFirstName("John");
+        persona2.setLastName("Wick");
+        persona2.setUserId("222");
+        persona2.setStatus(true);
 
+        System.out.println("Nombre: " + persona2.getFirstName());
+        System.out.println("Apellido: " + persona2.getLastName());
+
+        System.out.println("--------------------");
+
+        // Creación de estudiante (aquí usaremos el toString después)
+        Student stud1 = new Student();
+        stud1.setFirstName("Milan");
+        stud1.setLastName("Doe");
+        stud1.setBirthday("2024-05-20");
+
+        System.out.println(stud1.toString());
     }
 }

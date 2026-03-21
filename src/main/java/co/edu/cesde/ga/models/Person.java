@@ -2,12 +2,12 @@ package models;
 
 public abstract class Person {
     // Atributos protegidos para que las clases hijas puedan acceder a ellos
-    private String documentNumber;
-    private String firstName;
-    private String lastName;
-    private String userId;
-    private boolean status;
-    private String birthday; // Agregado para el requerimiento del toString
+    public String documentNumber;
+    public String firstName;
+    public String lastName;
+    public String userId;
+    public boolean status;
+    public String birthday; // Agregado para el requerimiento del toString
 
     // Constructor vacío
     public Person() {}
