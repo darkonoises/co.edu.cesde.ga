@@ -43,4 +43,8 @@ public class Student extends Person {
 
     public Object getDocumentNumber() {
     }
+
+    public String getStatus() {
+        return null;
+    }
 }

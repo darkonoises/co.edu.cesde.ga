@@ -1,9 +1,9 @@
 package co.edu.cesde.ga.app;
 
 // Importamos las clases del paquete models
-import models.Person;
-import models.Student;
-import models.Teacher;
+import co.edu.cesde.ga.models.Person;
+import co.edu.cesde.ga.models.Student;
+import co.edu.cesde.ga.models.Teacher;
 
 public class main {
     public static void main(String[] args) {

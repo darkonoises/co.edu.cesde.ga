@@ -18,6 +18,8 @@ public interface StudentRepo {
 
     String getDocumentNumber();
 
+    boolean existsByuserId(String userId);
+
 
     //fila final//
 }

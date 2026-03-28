@@ -38,7 +38,7 @@ public StudentRepositoryInMemory() {
         return false;
     }
 
-    return students = findById(String userId);
+    return students = existsByuserId(String userId);
     if(students == null) {
         return false;
     }
@@ -96,6 +96,11 @@ public StudentRepositoryInMemory() {
     @Override
     public String getDocumentNumber() {
         return "";
+    }
+
+    @Override
+    public boolean existsByuserId(String userId) {
+        return false;
     }
 
 

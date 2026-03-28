@@ -1,6 +1,6 @@
 package co.edu.cesde.ga.models;
 
-public abstract class Person {
+public abstract class Person{
     // Atributos protegidos para que las clases hijas puedan acceder a ellos
     public String documentNumber;
     public String firstName;
